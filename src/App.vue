@@ -7,9 +7,6 @@
 <script>
 export default {
   name: 'App',
-  components: {
-    
-  },
   head: {
     title: {
       inner: 'ポートフォリオ',
@@ -42,18 +39,15 @@ export default {
       crossorigin: "anonymous",
       async: true
     }
-  ]
+  ],
 
 }
 </script>
 
 <style>
 #app {
-  font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width:100%;
 }
 </style>
