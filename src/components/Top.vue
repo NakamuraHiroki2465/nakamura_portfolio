@@ -47,13 +47,33 @@
             </div>
         </header>
         <main>
-            <section class="section" role="ポートフォリオ題名">
+            <section :style="this.width" class="section portfolio" role="ポートフォリオ題名">
                 <div class="portfolio relative">
                     <img class="portfolio__image" src="../assets/images/nakamura_portfolio.png" alt="中村拡幹のポートフォリオ写真">
                     <h1 class="portfolio__title">NAKAMURA&nbsp;HIROKI<br>PORTFOLIO</h1>
                 </div>
             </section>
-
+            <section class="section about-section" role="自己紹介">
+                <div class="about">
+                    <div class="about__content">
+                        <div class="about__content__name">
+                            <p class="about__content__name__kana">なかむら&nbsp;&nbsp;&nbsp;ひろき</p>
+                            <p class="about__content__name__kanji">中村&nbsp;拡幹</p>
+                        </div>
+                        <div class="about__content__explain">
+                            <p class="about__content__explain__p">1995年生まれ。システムエンジニア7ヶ月ほど</p>
+                            <p class="about__content__explain__p">大学4年の春に家業のホームページを作るためプログラミングを始めたことがきっかけでエンジニアの世界に入る</p>
+                            <p class="about__content__explain__p">大学4年の秋から始めたフロントエンド開発のインターンでVue.jsを使用し、実務の難しさに触れる</p>
+                            <p class="about__content__explain__p">入社後は通信系のERPシステム開発の基本設計から実装、テスト、リリースまでを経験</p>
+                            <p class="about__content__explain__p">特技は筋トレとタイピング、趣味はテニスとサイクリング</p>
+                            <p class="about__content__explain__p">好きな言葉は”冗談じゃない。いますぐトレーニングだ”</p>
+                        </div>
+                    </div>
+                    <div class="about__image">
+                        <img class="about__image__img" src="../assets/images/about.png" alt="自己紹介">
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 </template>
@@ -78,12 +98,16 @@ export default {
 //メニューアコーディオン用CSS
 @import '@/assets/css/headerMenuAccordion.scss';
 header{
-    width:100%;
+    width:100vw;
+    position:fixed;
+    z-index:100;
 }
 main{
     margin:0 0 0 50px;
     @include sp(){
         margin:0 0 0 20px;
+        width:100%;
+        box-sizing:content-box;
     }
 }
 .pc__layout{
@@ -137,10 +161,17 @@ main{
   opacity: 0;
 }
 .section{
-    width:100%;
+    margin:0 0 250px 0;
+    position:relative;
+    @include lg(){
+        min-width:1200px;
+    }
+    @include md(){
+        min-width:1200px;
+    }
     .portfolio{
-        width:100%;
         margin-left: auto;
+        margin-bottom:60px;
         overflow:hidden;
         height:calc(100vh - 60px);
         min-height:600px;
@@ -168,6 +199,127 @@ main{
                 font-size:30px
             }
         }
+    }
+}
+
+.about{
+    @include lg(){
+        display:flex;
+        min-width:1200px;
+    }
+    @include md(){
+        display:flex;
+        min-width:1200px;
+    }
+    &__content{
+        margin:0 50px;
+        @include sp(){
+            margin:0 10px;
+        }
+        &__name{
+            &__kana{
+                margin:0;
+            }
+            &__kanji{
+                font-size:30px;
+                font-weight:lighter;
+                margin:0;
+            }
+        }
+        &__explain{
+            &__p{
+                font-size:12px;
+                @include lg(){
+                    min-width:650px;
+                }
+                @include sp(){
+                    margin:0;
+                    padding:0;
+                    line-height:25px;
+                }
+            }
+        }
+    }
+    &__image{
+        min-width:400px;
+        height:300px;
+        overflow:hidden;
+        @include sp(){
+            min-width:100%;
+            &__img{
+                width:95%;
+                margin:0 auto;
+            }
+        }
+    }
+}
+.about-section{
+    @include lg(){
+        &::before{
+            content:'ABOUT';
+            font-size:20px;
+            font-style:italic;
+            position:absolute;
+            top:0;
+            left:0;
+            transform-origin:0 0 ;
+            transform:rotate(-90deg)translate(-170px,-12px);
+            z-index:2;
+        }
+        &::after{
+            content:'';
+            background-color:#F5EBD0;
+            opacity:0.6;
+            width:12px;
+            height:170px;
+            position:absolute;
+            top:0;
+            left:0;
+        }        
+    }
+    @include md(){
+        &::before{
+            content:'ABOUT';
+            font-size:20px;
+            font-style:italic;
+            position:absolute;
+            top:0;
+            left:0;
+            transform-origin:0 0 ;
+            transform:rotate(-90deg)translate(-170px,-12px);
+            z-index:2;
+        }
+        &::after{
+            content:'';
+            background-color:#F5EBD0;
+            opacity:0.6;
+            width:12px;
+            height:170px;
+            position:absolute;
+            top:0;
+            left:0;
+        }        
+    }
+    @include sp(){
+        &::before{
+            content:'ABOUT';
+            font-size:20px;
+            font-style:italic;
+            position:absolute;
+            top:-50px;
+            left:10px;
+            z-index:2;
+        }
+        &::after{
+            content:'';
+            background-color:#F5EBD0;
+            opacity:0.6;
+            width:170px;
+            height:12px;
+            position:absolute;
+            top:-40px;
+            left:10px;
+        }        
     }
 }
 .relative{
