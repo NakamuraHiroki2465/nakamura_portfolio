@@ -120,6 +120,36 @@
                     </div>
                 </div>
             </section>
+            <section class="section works-section">
+                <div class="works">
+                    <ul class="works__wrapper">
+                        <li class="works__wrapper__list">
+                            <div v-if="isSp" class="works__wrapper__list__title">
+                                <h2 class="works__wrapper__list__title__content">1.&nbsp;通信系企業のERPシステム開発</h2>
+                            </div>
+                            <div class="works__wrapper__list__content">
+                                <img class="works__wrapper__list__content__image" src="../assets/images/works_1.png" alt="2020年6月~">
+                                <span class="works__wrapper__list__content__explain">2020年6月&nbsp;～</span>
+                            </div>
+                            <div v-if="!isSp" class="works__wrapper__list__title">
+                                <h2 class="works__wrapper__list__title__content">1.&nbsp;通信系企業のERPシステム開発</h2>
+                            </div>
+                        </li>
+                        <li class="works__wrapper__list">
+                            <div v-if="isSp" class="works__wrapper__list__title">
+                                <h2 class="works__wrapper__list__title__content">2.&nbsp;不動産投資関係のWEBアプリ開発</h2>
+                            </div>
+                            <div class="works__wrapper__list__content">
+                                <img class="works__wrapper__list__content__image" src="../assets/images/works_2.png" alt="2019年9月~2020年2月">
+                                <span class="works__wrapper__list__content__explain">2019年9月&nbsp;～&nbsp;<br v-if="isSp">2020年2月</span>
+                            </div>
+                            <div v-if="!isSp" class="works__wrapper__list__title">
+                                <h2 class="works__wrapper__list__title__content">2.&nbsp;不動産投資関係のWEBアプリ開発</h2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </main>
     </div>
 </template>
@@ -370,6 +400,87 @@ main{
                 }
                 &__explain{
                     font-size:12px;
+                }
+            }
+        }
+    }
+}
+.works-section{
+    @include subtitle(#ABB6EB,'WORKS');
+}
+.works{
+    &__wrapper{
+        @include lg(){
+            width:85%;
+            margin:auto;
+            display:flex;
+            justify-content:space-between;
+        }
+        @include md(){
+            width:85%;
+            margin:auto;
+            display:flex;
+            justify-content:space-between;
+        }
+        @include sp(){
+            width:90%;
+            margin:0;
+        }
+        padding:0;
+        &__list{
+            margin:0 50px;
+            list-style:none;
+            @include sp(){
+                margin:0;
+            }
+            &__content{
+                position:relative;
+                @include sp(){
+                    height:100px;
+                    overflow:hidden;
+                }
+                &__image{
+                    width:500px;
+                    @include sp(){
+                        width:100%;
+                        position:absolute;
+                        top:50%;
+                        transform:translateY(-50%);
+                    }
+                }
+                &__explain{
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    color:#F4F5F7;
+                    font-size:20px;
+                    z-index:3;
+                }
+                &::after{
+                    content:'';
+                    background-color:rgba(0,0,0,0.5);
+                    display:block;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    z-index:2;
+                    width:100%;
+                    height:calc(100% - 7px);
+                    @include sp(){
+                        height:100%;
+                    }
+                }
+            }
+            &__title{
+                margin:50px 0 0 0;
+                &__content{
+                    font-size:20px;
+                    font-weight:lighter;
+                    text-align:center;
+                    @include sp(){
+                        font-size:15px;
+                    }
                 }
             }
         }
