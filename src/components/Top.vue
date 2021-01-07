@@ -74,6 +74,52 @@
                     </div>
                 </div>
             </section>
+            <section class="section gengo-section">
+                <div class="gengo">
+                    <div class="gengo__title">
+                        <p class="gengo__title__content">使用言語</p>
+                    </div>
+                    <div class="gengo__box">
+                        <div class="gengo__box__wrapper">
+                            <div class="gengo__box__wrapper__title">
+                                <p class="gengo__box__wrapper__title__content">Java</p>
+                            </div>
+                            <div class="gengo__box__wrapper__content">
+                                <img class="gengo__box__wrapper__content__image" src="../assets/images/Java.png" alt="Javaの使用経験">
+                                <p class="gengo__box__wrapper__content__experience">使用経験&nbsp;:&nbsp;9ヶ月</p>
+                                <p class="gengo__box__wrapper__content__framework">使用フレームワーク&nbsp;:&nbsp;Spring&nbsp;&nbsp;MVC</p>
+                                <p class="gengo__box__wrapper__content__explain">9か月以上の経験あり。現職通信系企業のERPシステム開発の現場で使用</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gengo__box">
+                        <div class="gengo__box__wrapper">
+                            <div class="gengo__box__wrapper__title">
+                                <p class="gengo__box__wrapper__title__content">Javascript</p>
+                            </div>
+                            <div class="gengo__box__wrapper__content">
+                                <img class="gengo__box__wrapper__content__image" src="../assets/images/Javascript.png" alt="Javascriptの使用経験">
+                                <p class="gengo__box__wrapper__content__experience">使用経験&nbsp;:&nbsp;1年</p>
+                                <p class="gengo__box__wrapper__content__framework">使用フレームワーク&nbsp;:&nbsp;Vue.js</p>
+                                <p class="gengo__box__wrapper__content__explain">1年以上の経験あり。WEB開発のインターンと通信系企業のERPシステム開発で使用</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gengo__box">
+                        <div class="gengo__box__wrapper">
+                            <div class="gengo__box__wrapper__title">
+                                <p class="gengo__box__wrapper__title__content">HTML&amp;CSS</p>
+                            </div>
+                            <div class="gengo__box__wrapper__content">
+                                <img class="gengo__box__wrapper__content__image" src="../assets/images/HTML,CSS.png" alt="HTML及びCSSの使用経験">
+                                <p class="gengo__box__wrapper__content__experience">使用経験&nbsp;:&nbsp;1.5年</p>
+                                <p class="gengo__box__wrapper__content__framework">使用フレームワーク&nbsp;:&nbsp;bulma,SCSS</p>
+                                <p class="gengo__box__wrapper__content__explain">家業のホームページ作成時に使用し、フレックスボックスやbulmaなどのフレームワークを利用したレスポンシブなページを作成可能。<br>アコーディオンボタンなどの作成経験もあり</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 </template>
@@ -103,11 +149,11 @@ header{
     z-index:100;
 }
 main{
-    margin:0 0 0 50px;
+    padding:0 0 0 50px;
     @include sp(){
-        margin:0 0 0 20px;
+        padding:0 0 0 20px;
         width:100%;
-        box-sizing:content-box;
+        box-sizing:border-box;
     }
 }
 .pc__layout{
@@ -168,6 +214,9 @@ main{
     }
     @include md(){
         min-width:1200px;
+    }
+    @include sp(){
+        margin:0 0 150px 0 ;
     }
     .portfolio{
         margin-left: auto;
@@ -246,6 +295,7 @@ main{
         overflow:hidden;
         @include sp(){
             min-width:100%;
+            margin:20px auto;
             &__img{
                 width:95%;
                 margin:0 auto;
@@ -254,73 +304,7 @@ main{
     }
 }
 .about-section{
-    @include lg(){
-        &::before{
-            content:'ABOUT';
-            font-size:20px;
-            font-style:italic;
-            position:absolute;
-            top:0;
-            left:0;
-            transform-origin:0 0 ;
-            transform:rotate(-90deg)translate(-170px,-12px);
-            z-index:2;
-        }
-        &::after{
-            content:'';
-            background-color:#F5EBD0;
-            opacity:0.6;
-            width:12px;
-            height:170px;
-            position:absolute;
-            top:0;
-            left:0;
-        }        
-    }
-    @include md(){
-        &::before{
-            content:'ABOUT';
-            font-size:20px;
-            font-style:italic;
-            position:absolute;
-            top:0;
-            left:0;
-            transform-origin:0 0 ;
-            transform:rotate(-90deg)translate(-170px,-12px);
-            z-index:2;
-        }
-        &::after{
-            content:'';
-            background-color:#F5EBD0;
-            opacity:0.6;
-            width:12px;
-            height:170px;
-            position:absolute;
-            top:0;
-            left:0;
-        }        
-    }
-    @include sp(){
-        &::before{
-            content:'ABOUT';
-            font-size:20px;
-            font-style:italic;
-            position:absolute;
-            top:-50px;
-            left:10px;
-            z-index:2;
-        }
-        &::after{
-            content:'';
-            background-color:#F5EBD0;
-            opacity:0.6;
-            width:170px;
-            height:12px;
-            position:absolute;
-            top:-40px;
-            left:10px;
-        }        
-    }
+    @include subtitle(#F5EBD0,'ABOUT');
 }
 .relative{
     position:relative;
@@ -330,11 +314,65 @@ main{
     font-family:"Noto Sans";
     font-size:30px;
 }
-#name_kanji{
-    font-size:43px;
+.gengo-section{
+    @include subtitle(#B8D9BD,'SKILL');
 }
-#name_hira{
-    font-size:25px;
+.gengo{
+    &__title{
+        margin:0 50px;
+        @include sp(){
+            margin:0 10px;
+        }
+        &__content{
+            font-size:25px;
+            font-weight:lighter;
+        }
+    }
+    &__box{
+        margin:50px;
+        @include sp(){
+            margin:50px 10px;
+        }
+        &__wrapper{
+            width:1200px;
+            display:flex;
+            @include sp(){
+                width:100%;
+                display:block;
+            }
+            &__title{
+                width:150px;
+                margin-right:50px;
+                &__content{
+                    font-size:20px;
+                    margin:0;
+                }
+            }
+            &__content{
+                &__image{
+                    @include lg(){
+                        width:800px;
+                    }
+                    @include md(){
+                        width:800px;
+                    }
+                    @include sp(){
+                        width:100%;
+                    }
+                }
+                &__experience{
+                    font-size:20px;
+                    margin:5px 0;
+                }
+                &__framework{
+                    font-size:20px;
+                    margin:5px 0;
+                }
+                &__explain{
+                    font-size:12px;
+                }
+            }
+        }
+    }
 }
-
 </style>

@@ -21,3 +21,75 @@ body{
     color:#707070;
     margin:0;
 }
+
+
+//画面右横のサブタイトルのmixin
+@mixin subtitle($color,$content){
+    @include lg(){
+        &::before{
+            content:$content;
+            font-size:20px;
+            font-style:italic;
+            position:absolute;
+            top:0;
+            left:0;
+            transform-origin:0 0 ;
+            transform:rotate(-90deg)translate(-150px,-12px);
+            z-index:2;
+        }
+        &::after{
+            content:'';
+            background-color:$color;
+            opacity:0.6;
+            width:12px;
+            height:150px;
+            position:absolute;
+            top:0;
+            left:0;
+        }        
+    }
+    @include md(){
+        &::before{
+            content:$content;
+            font-size:20px;
+            font-style:italic;
+            position:absolute;
+            top:0;
+            left:0;
+            transform-origin:0 0 ;
+            transform:rotate(-90deg)translate(-150px,-12px);
+            z-index:2;
+        }
+        &::after{
+            content:'';
+            background-color:$color;
+            opacity:0.6;
+            width:12px;
+            height:150px;
+            position:absolute;
+            top:0;
+            left:0;
+        }        
+    }
+    @include sp(){
+        &::before{
+            content:$content;
+            font-size:20px;
+            font-style:italic;
+            position:absolute;
+            top:-50px;
+            left:10px;
+            z-index:2;
+        }
+        &::after{
+            content:'';
+            background-color:$color;
+            opacity:0.6;
+            width:150px;
+            height:12px;
+            position:absolute;
+            top:-40px;
+            left:10px;
+        }        
+    }
+}

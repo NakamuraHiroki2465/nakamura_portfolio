@@ -48,6 +48,5 @@ export default {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width:100%;
 }
 </style>
