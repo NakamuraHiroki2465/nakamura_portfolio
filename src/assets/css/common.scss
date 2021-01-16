@@ -93,7 +93,28 @@ body{
         }        
     }
 }
-
+//画面右横のサブタイトルのmixin
+@mixin worksubtitle($color,$content){
+    &::before{
+        content:$content;
+        font-size:18px;
+        font-style:italic;
+        position:absolute;
+        top:-50px;
+        left:10px;
+        z-index:2;
+    }
+    &::after{
+        content:'';
+        background-color:$color;
+        opacity:0.6;
+        width:150px;
+        height:12px;
+        position:absolute;
+        top:-40px;
+        left:10px;
+    }        
+}
 .list-point{
     list-style:none;
     &::before{
@@ -105,4 +126,26 @@ body{
         background-color:#707070;
         vertical-align:middle;
     }
+}
+//画面右横のサブタイトルのmixin
+@mixin subtitleprivate($color,$content){
+    &::before{
+        content:$content;
+        font-size:18px;
+        font-style:italic;
+        position:absolute;
+        top:-50px;
+        left:0;
+        z-index:2;
+    }
+    &::after{
+        content:'';
+        background-color:$color;
+        opacity:0.6;
+        width:180px;
+        height:12px;
+        position:absolute;
+        top:-40px;
+        left:0;
+    }  
 }

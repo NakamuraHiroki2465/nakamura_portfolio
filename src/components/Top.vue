@@ -4,16 +4,16 @@
             <div v-if="!isSp" class="pc__layout">
                 <ul class = "header__menu">
                     <li class = "header__menu__list">
-                        ABOUT
+                        <a class="header__menu__list__link" @click="scrollTo('about')">ABOUT</a>
                     </li>
                     <li class = "header__menu__list">
-                        WORKS
+                        <a class="header__menu__list__link" @click ="scrollTo('works')">WORKS</a>
                     </li>
                     <li class = "header__menu__list">
-                        PRIVATE&nbsp;WORKS
+                        <a class="header__menu__list__link" @click ="scrollTo('private')">PRIVATE&nbsp;WORKS</a>
                     </li>
                     <li class = "header__menu__list">
-                        GITHUB
+                        <a class="header__menu__list__link" href="https://github.com/NakamuraHiroki2465/FukumatuyaVue">GITHUB</a>
                     </li>
                 </ul>
             </div>
@@ -27,16 +27,16 @@
                     <div v-if="isOpenedHeaderMenu"  class="sp__layout__wrapper">
                         <ul class = "sp__layout__wrapper__menu">
                             <li class = "sp__layout__wrapper__menu__list">
-                                ABOUT
+                                <a class="sp__layout__wrapper__menu__list__link" @click="scrollTo('about')">ABOUT</a>
                             </li>
                             <li class = "sp__layout__wrapper__menu__list">
-                                WORKS
+                                <a class="sp__layout__wrapper__menu__list__link" @click="scrollTo('works')">WORKS</a>
                             </li>
                             <li class = "sp__layout__wrapper__menu__list">
-                                PRIVATE&nbsp;WORKS
+                                <a class="sp__layout__wrapper__menu__list__link" @click="scrollTo('private')">PRIVATE&nbsp;WORKS</a>
                             </li>
                             <li class = "sp__layout__wrapper__menu__list">
-                                GITHUB
+                                <a class="sp__layout__wrapper__menu__list__link" href="https://github.com/NakamuraHiroki2465/FukumatuyaVue">GITHUB</a>
                             </li>
                         </ul>
                         <div class="sp__layout__wrapper__copyright">
@@ -53,7 +53,7 @@
                     <h1 class="portfolio__title">NAKAMURA&nbsp;HIROKI<br>PORTFOLIO</h1>
                 </div>
             </section>
-            <section class="section about-section" role="自己紹介">
+            <section class="section about-section" id ="about" role="自己紹介">
                 <div class="about">
                     <div class="about__content">
                         <div class="about__content__name">
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section works-section">
+            <section class="section works-section" id="works">
                 <div class="works">
                     <ul class="works__wrapper">
                         <li class="works__wrapper__list">
@@ -150,7 +150,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="section work1-section">
+            <section class="section work1-section" id="work-1">
                 <div class="work1">
                     <div class="work1__title">
                         <p class="work1__title__content">1.通信系企業のERPシステム開発</p>
@@ -288,7 +288,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section work2-section">
+            <section class="section work2-section" id="work-2">
                 <div class="work2">
                     <div class="work2__title">
                         <p class="work2__title__content">2.不動産投資関係のWEBアプリ開発</p>
@@ -404,6 +404,133 @@
                     </div>
                 </div>
             </section>
+            <section class="section private-section" id="private">
+                <div class="private">
+                    <div class="private__title">
+                        <p class="private__title__content">個人制作物</p>
+                    </div>
+                    <div class="private__wrapper">
+                        <div class="private__wrapper__content">
+                            <div class="private__wrapper__content__abstract">
+                                <p class="private__wrapper__content__abstract__title">
+                                    概要
+                                </p>
+                                <p class="private__wrapper__content__abstract__content">
+                                    Vue.jsを使用し、両親の経営する割烹料理のホームページを作成<br>Vue-routerを使用してルーティングを行い、<br>CSSフレームワークとしてbulma、<br>JavascriptのフレームワークとしてjQueryなどを使用
+                                </p>
+                            </div>
+                            <div class="private__wrapper__content__gengo">
+                                <p class="private__wrapper__content__gengo__title">
+                                    使用言語
+                                </p>
+                                <ul class="private__wrapper__content__gengo__ul">
+                                    <li class="private__wrapper__content__gengo__ul_list list-point">
+                                        Javascript
+                                    </li>
+                                    <li class="private__wrapper__content__gengo__ul_list list-point">
+                                        HTML&amp;CSS
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="private__wrapper__content__framework">
+                                <p class="private__wrapper__content__framework__title">
+                                    使用フレームワーク
+                                </p>
+                                <ul class="private__wrapper__content__framework__ul">
+                                    <li class="private__wrapper__content__framework__ul__list list-point">
+                                        Vue.js
+                                    </li>
+                                    <li class="private__wrapper__content__framework__ul__list list-point">
+                                        Git
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="private__wrapper__content__tool">
+                                <p class="private__wrapper__content__tool__title">
+                                    使用ツール
+                                </p>
+                                <ul class="private__wrapper__content__tool__ul">
+                                    <li class="private__wrapper__content__tool__ul__list list-point">
+                                        GitHub
+                                    </li>
+                                    <li class="private__wrapper__content__tool__ul__list list-point">
+                                        npm
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="private__wrapper__content__source">
+                                <p class="private__wrapper__content__source__title">
+                                    ソースコード
+                                </p>
+                                <a class="private__wrapper__content__source__link" href="https://github.com/NakamuraHiroki2465/FukumatuyaVue">
+                                    こちらから
+                                </a>
+                            </div>
+                            <div class="private__wrapper__content__source">
+                                <p class="private__wrapper__content__source__title">
+                                    サイトへ飛ぶ
+                                </p>
+                                <a class="private__wrapper__content__source__link" href="https://www.fukumatuya.com">
+                                    こちらから
+                                </a>
+                            </div>
+                        </div>
+                        <div class="private__wrapper__image">
+                            <div class="private__wrapper__image__title">
+                                <p class="private__wrapper__image__title__content">福松家</p>
+                            </div>
+                            <div class="private__wrapper__image__wrapper"
+                                @mouseover="mouseOverAction" 
+                                @mouseleave="mouseLeaveAction" 
+                            >
+                                <router-link 
+                                    tag="div" 
+                                    to ="https://www.fukumatuya.com" 
+                                    class="private__wrapper__image__wrapper__link"
+                                >
+                                    <transition name="fade">
+                                        <span 
+                                            v-show="hoverLink" 
+                                            class="private__wrapper__image__wrapper__link__text"
+                                        >
+                                        こちらのページへ飛ぶ
+                                        </span>
+                                    </transition>
+                                </router-link>
+                                <img class="private__wrapper__image__wrapper__content" src="../assets/images/privatework.png" alt="福松家のトップページ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer-section">
+                <div class="footer">
+                    <p @click="scrollTo('about')" class="footer__about">
+                        ABOUT
+                    </p>
+                    <p @click="scrollTo('works')" class="footer__about">
+                        WORKS
+                    </p>
+                    <p @click="scrollTo('work-1')" class="footer__about">
+                        WORK1
+                    </p>
+                    <p @click="scrollTo('work-2')" class="footer__about">
+                        WORK2
+                    </p>
+                    <p @click="scrollTo('private')" class="footer__about">
+                        PRIVATE_WORKS
+                    </p>
+                    <a href="https://github.com/NakamuraHiroki2465" class="footer__link" style="text-decoration:none;color:#707070;">
+                        GITHUB
+                    </a>
+                    <a href="https://qiita.com/NakamuraHiroki2465" class="footer__link" style="text-decoration:none;color:#707070;">
+                        QIITA
+                    </a>
+                </div>
+                <div class="footer__copyright">
+                    <small>©allrights reseved nakamura hiroki</small>
+                </div>
+            </footer>
         </main>
     </div>
 </template>
@@ -412,13 +539,34 @@ export default {
     data:function(){
         return {
             width : window.innnerWidth,
-            isOpenedHeaderMenu : false
+            isOpenedHeaderMenu : false,
+            element : 0,
+            hoverLink : false,
         }
     },
     methods:{
         toggleMenu:function(){
             this.isOpenedHeaderMenu = !this.isOpenedHeaderMenu
         },
+        scrollTo:function(elem){
+            this.element = document.getElementById(elem);
+            var elem_position = this.element.getBoundingClientRect();
+            console.log(elem_position.top);
+            window.scrollBy({
+                top:elem_position.top,
+                left:0,
+                behavior:'smooth'
+            });
+            if (this.isOpenedHeaderMenu == true) {
+                this.isOpenedHeaderMenu = false;
+            }
+        },
+        mouseOverAction(){
+            this.hoverLink = true;
+        },
+        mouseLeaveAction(){
+            this.hoverLink = false;
+        }
     }
 }
 </script>
@@ -452,6 +600,13 @@ main{
             height:60px;
             line-height:60px;
             list-style:none;
+            &__link{
+                color:#707070;
+                text-decoration:none;
+                &:hover{
+                    cursor:pointer;
+                }
+            }
         }
     }
 }
@@ -473,6 +628,13 @@ main{
                 height:60px;
                 line-height:60px;
                 list-style:none;
+                &__link{
+                    &:hover{
+                        cursor:pointer;
+                    }
+                    color:#707070;
+                    text-decoration:none;
+                }
             }
         }
         &__copyright{
@@ -527,9 +689,10 @@ main{
             bottom:10%;
             @include sp(){
                 font-size:25px;
+                bottom:15%;
             }
             @include md(){
-                font-size:30px
+                font-size:30px;
             }
         }
     }
@@ -743,12 +906,18 @@ main{
 .work1-section,.work2-section{
     background-color:white;
     width:90%;
-    margin:50px auto;
+    margin:100px auto;
     @include sp(){
         width:100%;
         position:relative;
         left:-10px;
     }
+}
+.work1-section{
+    @include worksubtitle(#ABB6EB,'WORK1');
+}
+.work2-section{
+    @include worksubtitle(#ABB6EB,'WORK2');
 }
 .border-line{
     display:flex;
@@ -1032,6 +1201,196 @@ main{
                 }
             }
         }
+    }
+}
+.private-section{
+    width:90%;
+    margin:150px auto;
+    @include sp(){
+        width:100%;
+        position:relative;
+        left:-10px;
+    }
+}
+.private{
+    @include subtitleprivate(#D7A7C7,'PRIVATE WORKS');
+
+    &__title{
+        &__content{
+            font-size:20px;
+        }
+    }
+    &__wrapper{
+        display:flex;
+        @include sp(){
+            display:block;
+        }
+        &__content{
+            width:600px;
+            background-color:white;
+            padding:20px;
+            margin-left:10px;
+            @include sp(){
+                width:90%;
+                margin:0;
+            }
+            &__abstract{
+                &__title{
+                    font-size:20px;
+                    margin:5px 0;
+                }
+                &__content{
+                    font-size:13px;
+                    margin:5px;
+                }
+            }
+            &__gengo{
+                &_title{
+                    margin:5px 0;
+                }
+                &__ul{
+                    font-size:13px;
+                    margin:5px 0;
+                    padding-left:10px;
+                    &__list{
+                    }
+                }
+            }
+            &__framework{
+                &_title{
+                    margin:5px 0;
+                }
+                &__ul{
+                    font-size:13px;
+                    margin:5px 0;
+                    padding-left:10px;
+                    &__list{
+                        
+                    }
+                }
+            }
+            &__tool{
+                &_title{
+                    margin:5px 0;
+                }
+                &__ul{
+                    font-size:13px;
+                    margin:5px 0;
+                    padding-left:10px;
+                    &__list{
+                        
+                    }
+                }
+            }
+            &__source{
+                margin-top:20px;
+                &__title{
+                    margin:5px 0;
+                }
+                &__link{
+                    color:#8EB7CF;
+                    text-decoration:none;
+                }
+            }
+        }
+        &__image{
+            margin-left:30px;
+            @include sp(){
+                margin:30px 0 0 0;
+            }
+            &__title{
+                &__content{
+                    font-family:"HG行書体", monospace;
+                    font-weight:bold;
+                    color:black;
+                    font-size:20px;
+                    margin:0 0 20px 0;
+                    padding:0;
+                }
+            }
+            &__wrapper{
+                position:relative;
+                &__link{
+                    display:block;
+                    position:absolute;
+                    background-color:rgba(0,0,0,0);
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    width:100%;
+                    height:calc(100% - 7px);
+                    z-index:2;
+                    transition:background-color 0.5s;
+                    &:hover{
+                        cursor:pointer;
+                        background-color:rgba(0,0,0,0.3);
+                        transition:background-color 0.5s;
+                    }
+                    &__text{
+                        display:block;
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                        text-decoration:none;
+                        color:white;
+                        font-size:25px;
+                        z-index:3;
+                        &:hover{
+                            cursor:pointer;
+                        }
+                    }
+                }
+                &__content{
+                    width:500px;
+                    @include sp(){
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to  {
+  opacity: 0;
+}
+
+.footer{
+    position:relative;
+    left:-10px;
+    margin:0 auto;
+    @include lg(){
+        width:800px;
+        display:flex;
+        justify-content:space-between;
+    }
+    @include md(){
+        width:800px;
+        display:flex;
+        justify-content:space-between;
+    }
+    &__about{
+        margin:15px 0;
+        text-align:center;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+    &__link{
+        margin:15px 0;
+        text-align:center;
+        display:block;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+    &__copyright{
+        font-size:10px;
+        text-align:center;
+        margin:10px 0 50px 0;
     }
 }
 </style>

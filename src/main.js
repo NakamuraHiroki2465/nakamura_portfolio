@@ -5,6 +5,7 @@ import App from './App.vue'
 import {routes} from './router'
 import utils from './mixins/utils.vue'
 
+
 //グローバルなcssの定義
 import './assets/css/common.scss'
 
