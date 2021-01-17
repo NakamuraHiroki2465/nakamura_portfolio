@@ -1,24 +1,26 @@
-# nakamura_portfolio
+#中村拡幹のポートフォリオです
+##以下のセクションで展開されています
+<dl>
+    <dt>自己紹介</dt>
+    <dt>スキル紹介</dt>
+    <dt>仕事内容</dt>
+    <dt>個人開発内容</dt>
+</dl>
 
-## Project setup
-```
-npm install
-```
+###使用ツール
+<dl>
+    <dt>VS Code</dt>
+    <dt>Github</dt>
+    <dt>Git</dt>
+</dl>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+###使用フレーム枠
+<dl>
+    <dt>Vue.js</dt>
+</dl>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+###デザイン担当
+*中村拡幹*
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+###実装担当
+*中村拡幹*
