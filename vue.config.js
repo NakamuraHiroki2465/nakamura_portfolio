@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: '/NAKAMURA_PORTFOLIO/',
+    publicPath: './',
     outputDir: 'docs'
 }
