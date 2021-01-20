@@ -552,7 +552,6 @@ export default {
         scrollTo:function(elem){
             this.element = document.getElementById(elem);
             var elem_position = this.element.getBoundingClientRect();
-            console.log(elem_position.top);
             window.scrollBy({
                 top:elem_position.top,
                 left:0,
