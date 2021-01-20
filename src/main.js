@@ -16,7 +16,7 @@ Vue.use(VueRouter)
 Vue.use(VueHead)
 
 const router = new VueRouter({
-  
+  mode:'history',  
   routes
 });
 
