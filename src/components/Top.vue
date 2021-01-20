@@ -536,6 +536,7 @@
 </template>
 <script>
 export default {
+    name: 'top',
     data:function(){
         return {
             width : window.innnerWidth,
