@@ -123,7 +123,7 @@
             <section class="section works-section" id="works">
                 <div class="works">
                     <ul class="works__wrapper">
-                        <li class="works__wrapper__list">
+                        <li class="works__wrapper__list"  @click ="scrollTo('work-1')">
                             <div v-if="isSp" class="works__wrapper__list__title">
                                 <h2 class="works__wrapper__list__title__content">1.&nbsp;通信系企業のERPシステム開発</h2>
                             </div>
@@ -135,7 +135,7 @@
                                 <h2 class="works__wrapper__list__title__content">1.&nbsp;通信系企業のERPシステム開発</h2>
                             </div>
                         </li>
-                        <li class="works__wrapper__list">
+                        <li class="works__wrapper__list"  @click ="scrollTo('work-2')">
                             <div v-if="isSp" class="works__wrapper__list__title">
                                 <h2 class="works__wrapper__list__title__content">2.&nbsp;不動産投資関係のWEBアプリ開発</h2>
                             </div>
@@ -681,7 +681,8 @@ main{
             transform:translate(-50%,-50%);
         }
         &__title{
-            color:#FFFFFF;
+            color:black;
+            font-style:italic;
             font-size:43px;
             font-weight:lighter;
             position:absolute;
@@ -737,9 +738,12 @@ main{
         }
     }
     &__image{
-        min-width:400px;
+        min-width:300px;
         height:300px;
         overflow:hidden;
+        &__img{
+            height:300px;
+        }
         @include sp(){
             min-width:100%;
             margin:20px auto;
@@ -847,6 +851,9 @@ main{
         &__list{
             margin:0 50px;
             list-style:none;
+            &:hover{
+                cursor:pointer;
+            }
             @include sp(){
                 margin:0;
             }

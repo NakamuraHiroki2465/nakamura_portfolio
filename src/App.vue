@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <top></top>
   </div>
 </template>
-
 <script>
+import top from './components/Top.vue'
 export default {
   name: 'App',
+  components:{
+    top
+  },
   head: {
     title: {
       inner: 'ポートフォリオ',
