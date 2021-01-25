@@ -483,9 +483,8 @@
                                 @mouseover="mouseOverAction" 
                                 @mouseleave="mouseLeaveAction" 
                             >
-                                <router-link 
-                                    tag="div" 
-                                    to ="https://www.fukumatuya.com" 
+                                <a
+                                    href ="https://www.fukumatuya.com" 
                                     class="private__wrapper__image__wrapper__link"
                                 >
                                     <transition name="fade">
@@ -496,7 +495,7 @@
                                         こちらのページへ飛ぶ
                                         </span>
                                     </transition>
-                                </router-link>
+                                </a>
                                 <img class="private__wrapper__image__wrapper__content" src="../assets/images/privatework.png" alt="福松家のトップページ">
                             </div>
                         </div>
@@ -562,10 +561,14 @@ export default {
             }
         },
         mouseOverAction(){
-            this.hoverLink = true;
+            if (!this.sp){
+                this.hoverLink = true;
+            }
         },
         mouseLeaveAction(){
-            this.hoverLink = false;
+            if (!this.sp){
+                this.hoverLink = false;
+            }
         }
     }
 }
